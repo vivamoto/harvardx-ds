@@ -1,0 +1,490 @@
+---
+title: "DS05 - Productivity Tools"
+author: "Victor Ivamoto"
+date: "06/11/2019"
+output: 
+  html_document: 
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Section 1: Installing Software
+## Section 1 Overview
+The Installing Software section walks you through the steps to download and install R, RStudio, git (and git bash on Windows machines), create a GitHub account, and connect RStudio to GitHub.
+
+There is a graded comprehension check at the end of the section.
+
+If you get stuck, we encourage you to search the discussion boards for the answer to your issue or ask us for help!
+
+## 1.1 Installing R and RStudio
+### Installing Software
+**Textbook Link**  
+This video corresponds to the [textbook introduction to productivity tools.](https://rafalab.github.io/dsbook/introduction-to-productivity-tools.html)
+
+**Key points**
+
+We will install:
+
+- R: the programming language we use to analyze data
+- RStudio: the integrated desktop environment we use to edit, organize, and test R scripts
+- Git (and Git Bash for Windows): version control system
+
+### Installing R
+**Textbook Link**  
+This video corresponds to the textbook section on [installing R.](https://rafalab.github.io/dsbook/installing-r-rstudio.html#installing-r)
+
+**Key points**
+
+- You need to install R before using Rstudio, which is an interactive desktop environment.
+- Select base subdirectory in CRAN and click download
+- Select all default choice in the installation process
+- Recommend selecting English for language to help you better follow the course
+- One can try using the R console, but for productivity purposes, we can switch to Rstudio
+
+**Download R from CRAN**  
+You can find the latest version of R for your operating system at the [CRAN website.](https://cran.r-project.org/)
+
+### Installing RStudio
+**Textbook Link**  
+This video corresponds to the textbook section on [installing RStudio.](https://rafalab.github.io/dsbook/installing-r-rstudio.html#installing-rstudio)
+
+**Key points**
+
+- You can download the latest version of RStudio at the [RStudio website.](https://www.rstudio.com/products/rstudio/download/)
+- The free desktop version is more than enough for this course.
+- Make sure to choose the version for your own operating system.
+- Choose "Yes" for all defaults in the installation process.
+
+### Using RStudio for the First Time
+**Textbook Link**  
+This video corresponds to material in the textbook section on [Getting Started.](https://rafalab.github.io/dsbook/getting-started.html)
+
+**Key Points**
+
+- In Windows, search for Rstudio in "Start"
+- In Mac, choose Rstudio from applications, or use Command+Space to use spotlight search to avoid using the mouse
+- To start a new script: file > new file > Rscript (or using key bindings: Ctrl+Shift+N on Windows, and Command+Shift+N on Mac)
+- Key bindings from Rstudio cheatsheet can be located with Help > cheatsheet > Rstudio IDE cheatsheet
+
+## 1.2 Introduction to RStudio
+### Installing Packages
+**Textbook link**  
+This video corresponds to the textbook section [installing R packages.](https://rafalab.github.io/dsbook/getting-started.html#installing-r-packages)
+
+**Key points**
+
+- We will be using **tidyverse** and **dslabs** packages for this course, which do not come preinstalled in base R.
+- Install packages from R console: `install.packages("pkg_name")`
+- Install packages from Rstudio interface: Tools > install packages (allow autocomplete)
+- Once installed, we can use `library("pkg_name")` to load a package each time we want to use it
+- Check the packages you have installed
+- Good practice: make a script to install all the packages you need for a fresh R
+
+**Code**
+```
+install.packages("dslabs")  # to install a single package
+install.packages(c("tidyverse", "dslabs")） # to install two packages at the same time
+installed.packages() # to see the list of all installed packages
+```
+### Running Commands While Editing Scripts
+**Textbook link**  
+This video corresponds to the textbook section on [RStudio.](https://rafalab.github.io/dsbook/getting-started.html#rstudio)
+
+**Key points**
+
+- Features of Rstudio as an R editor: test code easily as we write scripts, allow autocomplete and indentation, complete parentheses
+- Keyboard shortcuts:
+  1.Save a script: Ctrl+S on Windows and Command+S on Mac
+  1.Run an entire script:  Ctrl+Shift+Enter on Windows or command+shift+return on the Mac, or click "Source" on the editor pane
+  1.Run a single line of script: Ctrl+Enter while the cursor is pointing to that line, or select the chunk and click "run"
+  1. Open a new script: Ctrl+Shift+N on Windows and command+shift+N on the Mac
+
+**Code**
+```{r}
+library(tidyverse)
+```
+
+### Keeping Organized with RStudio Projects
+**Textbook Link**  
+This video corresponds to the textbook section on [RStudio projects.](https://rafalab.github.io/dsbook/reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects)
+
+**Key points**
+
+- RStudio provides a way to keep all the components of a data analysis project organized into one folder and to keep track of information about this project.
+- To start a project, click on File > New Project > New repository > New project > decide the location of files and give a name to the project, e.g. "my-first-project". This will then generate a Rproj file called my-first-project.Rproj in the folder associated with the project, from which you can double click to start where you last left off.
+- Project name will appear in the upper left corner or the upper right corner. When you start a RStudio session with no project, it will display "Project: (None)".
+
+## 1.3 Introduction to Git and GitHub
+### Installing Git Introduction
+**Key points**
+
+- Git is a version control system, tracking changes and coordinating the editing of code.
+- GitHub is a hosting system for code, which can help with your career profile.
+- Git is most effectively used with Unix, but can also work with Rstudio.
+
+### Installing Git
+There are **two** videos about installing git. You should watch the one that is appropriate for your machine.
+
+- If you have a **Windows machine**, you will need to install **git and git bash**. The **first video** walks you through this process.
+- If you have a **Mac**, you will only need to install git (which may already be installed on your system). The **second video** walks you through this process.
+
+**Textbook link**  
+These videos correspond to the textbook sections on installing Git on [installing Git](https://rafalab.github.io/dsbook/accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac) on Mac and [installing Git on Windows.](https://rafalab.github.io/dsbook/accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows)
+
+#### Install on Windows
+
+1. Download Git bash from https://git-scm.com/
+1. When asked to choose the default editor for Git, we recommend choosing nano if you do not already know VIM.
+1. The "git and optional Unix tools from Windows" option will allow you to learn Unix from Rstudio, however, it might interfere with the Windows command line.
+1. Finally, change the Rstudio preference so that you are using Git bash as the terminal (only for Windows user).
+
+#### Install on Mac
+
+1. Open the terminal, either from the utility folder or using Cmd+space, and check if you already have Git installed by typing git `--version` in the command line.
+1. If you already have git installed, you will be shown the version number after executing the above. If you do not have git installed already, you will be prompted to do so.
+
+### GitHub
+**Textbook link**  
+This video corresponds to the [textbook section on GitHub accounts.](https://rafalab.github.io/dsbook/git.html#github-accounts)
+
+**Key points**
+
+- Sign up for a GitHub account, with a name that is professional, short, and easy to remember
+- Connect to RStudio: global options > Git/SVM, enter the path to git executables
+- To avoid typing our GitHub password every time, we create a SSHRSA key automatically through RStudio with the *create RSA key* button.
+
+### GitHub Repositories
+**Textbook Link**  
+This video corresponds to the [textbook section on GitHub Repositories.](https://rafalab.github.io/dsbook/git.html#github-repos)
+
+**Key points**  
+To create a new GitHub repository and link it to an RStudio project, follow 2 steps:
+
+Step 1: Initialize a new repo on GitHub by clicking repository > new > choose a descriptive name.  
+
+Step 2: Connect to RStudio (next video).
+
+### RStudio, Git, and GitHub
+**Textbook link**  
+This video corresponds to the textbook section on [Overview of Git.](https://rafalab.github.io/dsbook/git.html#git-overview)
+
+**Key points**
+
+- In terminal: `config git`
+`git config --global user.name "Your Name"`
+`git config --global user.emai "your@email.com"`
+- In RStudio, create project > Version control > Git
+- Git pane: status symbols and color
+- Git actions:
+  1. **pull**: pull changes from remote repo (if you are in collaboration with others)
+  1. **add**: stage files for commit; click on stage box under git pane
+  1. **commit**: commit to the local repo; click on "commit" button under git pane; add a commit message
+  1. **push**: push to the remote repo on Github
+- `.gitignore` file: details check https://git-scm.com/docs/gitignore
+
+# Section 3: Reproducible Reports
+## Section 3 Overview
+The Reproducible Reports section guides you through how to create data science reports using R Markdown and the knitr package.
+
+There is a graded comprehension check at the end of the section.
+
+We will use [this example GitHub repository](https://github.com/rairizarry/murders) throughout.
+
+## 3.1 Reproducible Reports
+### Reproducible Reports with R Markdown
+**Textbook Link**  
+This video corresponds to the textbook section on [Reproducible Reports with R Markdown.](https://rafalab.github.io/dsbook/reproducible-projects-with-rstudio-and-r-markdown.html)
+
+**Key points**
+
+- The final output is usually a report, textual descriptions and figures, and tables.
+- The aim is to generate a reproducible report in R markdown and knitr.
+- Features of Rmarkdown: code and text can be combined to the same document and figures and tables are automatically added to the file.
+
+### R Markdown
+**Textbook link**  
+This video corresponds to the textbook section on [R Markdown.](https://rafalab.github.io/dsbook/reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown)
+
+**Useful links**  
+You can learn more about R Markdown at [markdowntutorial.com.](https://www.markdowntutorial.com/)
+
+The [code for the sample report](https://raw.githubusercontent.com/rairizarry/murders/master/report.Rmd) is available .
+
+**Key points**
+
+- R Markdown is a format for *literate programming* documents. Literate programming weaves instructions, documentation and detailed comments in between machine executable code, producing a document that describes the program that is best for human understanding.
+
+- Start an R markdown document by clicking on File > New File > the R Markdown
+
+- The output could be HTML, PDF, or Microsoft Word, which can be changed in the header output, e.g. pdf_document / html_document
+
+**Code**  
+ # a sample code chunk
+ ```{r}
+summary(pressure)
+ ```
+ # When echo=FALSE, code will be hided in output file
+ ```{r echo=FALSE}
+summary(pressure)
+ ```
+ # use a descriptive name for each chunk for debugging purpose
+ ```{r pressure-summary}
+summary(pressure)
+ ```
+ 
+### knitr
+**Useful Links**  
+This video corresponds to the textbook section on [knitr basics.](https://rafalab.github.io/dsbook/reproducible-projects-with-rstudio-and-r-markdown.html#knitr)
+
+The [code for the example report](https://raw.githubusercontent.com/rairizarry/murders/master/report.Rmd) is available.
+
+It also may be useful to explore the [RMarkdown website](https://rmarkdown.rstudio.com/) and the [knitr website.](https://yihui.name/knitr/)
+
+**Key points**
+
+- The **knitr** package is used to compile R markdown documents.
+- The first time you click the "knit" button on the editor pane a pop-up window will prompt you to install packages, but after that is completed, the button will automatically knit your document.
+- `github_document` gives a `.md` file, which will give the best presentation on GitHub
+
+**Code**
+`output: html_document`
+`output: pdf_document`
+`output: word_document`
+`output: github_document`
+
+# Section 4: Git and GitHub
+## Section 4 Overview
+In this section on Git and GitHub, you will learn to clone and create version-controlled GitHub repositories using the command line. 
+
+There is a graded comprehension check at the end of the section.
+
+If you get stuck, we encourage you to search the discussion boards for fixes or ask us for help!
+
+## 4.1 Git and GitHub
+### Git and GitHub
+**Textbook link**  
+This video corresponds to the textbook section on [why use Git and GitHub.](https://rafalab.github.io/dsbook/git.html#why-use-git-and-github)
+
+**Additional Git and GitHub resources:**  
+- [Codecademy](https://www.codecademy.com/learn/learn-git)
+- [GitHub Guides](https://guides.github.com/activities/hello-world/)
+- [Try Git tutorial](https://try.github.io/levels/1/challenges/1)
+- [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+
+**Key points**
+
+- Next, we will learn how to use Git and GitHub in the command line.
+- Reasons to use Git and GitHub:
+  1. Version-control: Permits us to keep track of changes we made to code, to revert back to previous versions of files, to test ideas using new branches and decide if we want to merge to the original.
+  1. Collaboration: On a centralized repo, multiple people may make changes to the code and keep versions synced. A pull request allows anyone to suggest changes to your code.
+  1. Sharing code
+- To effectively permit version control and collaboration, files move across four different areas: Working Directory, Staging Area, Local Repository, and Upstream Repository.
+- Start your Git journey with either cloning an existing repo, or initializing a new one.
+
+### Using Git at the Command Line
+**Textbook link**  
+This video corresponds to the textbook section on [Overview of Git.](https://rafalab.github.io/dsbook/git.html#git-overview)
+
+**Resources link**  
+Explore the [repository discussed in the video.](https://github.com/rairizarry/murders)
+
+**Key points**
+
+- Recap: there are four stages: working directory, staging area, local repository, and upstream repository
+- Clone an existing upstream repository (copy repo url from clone button, and type "`git clone <url>`"), and all three local stages are the same as upstream remote.
+- The working directory is the same as the working directory in Rstudio. When we edit files we only change the files in this place.
+- `git status`: tells how the files in the working directory are related to the files in other stages
+- edits in the staging area are not tracked by the version control system by default - we add a file to the staging area by `git add` command
+- `git commit`: to commit files from the staging area to local repository, we need to add a message stating what we are doing by `git commit -m "something"`
+- `git log`: keeps track of all the changes we have made to the local repository
+- `git push`: allows moving from the local repository to upstream repository, only if you have the permission (e.g. if it is yours)
+- `git fetch`: update local repository to  be like the upstream repository, from upstream to local
+- `git merge`: make the updated local sync with the working directory and staging area
+- To change everything in one shot (from upstream to working dir), use `git pull` (equivalent to combining `git fetch` + `git merge`)
+
+**Code**  
+```
+pwd
+mkdir git-example
+cd git-example
+git clone https://github.com/rairizarry/murders.git
+cd murders
+ls
+git status
+echo "test" >> new-file.txt
+echo "temporary" >> tmp.txt
+git add new-file.txt
+git status
+git commit -m "adding a new file" 
+git status
+echo "adding a second line" >> new-file.txt
+git commit -m "minor change to new-file" new-file.txt
+git status
+git add
+git log new-file.txt
+git push
+git fetch
+git merge
+```
+
+### Creating a GitHub Repository
+**Textbook Link**  
+This video corresponds to the textbook section on [Initializing a Git directory.](https://rafalab.github.io/dsbook/git.html#init)
+
+**Key points**
+
+- Recap: two ways to get started, one is cloning an existing repository, the other is initializing our own
+- Create our own project on our computer (independent of Git) on our own machine
+- Create an upstream repo on Github, copy repo's url
+- Make a local git repository: On the local machine, in the project directory, use `git init`. Now git starts tracking everything in the local repo.
+- Now we need to start moving files into our local repo and connect local repo to the upstream remote by `git remote add origin <url>`
+- **Note:** The first time you push to a new repository, you may also need to use these git push options: `git push --set-upstream origin master`. If you need to run these arguments but forget to do so, you will get an error with a reminder.
+
+**Code**
+```
+cd ~/projects/murders
+git init
+git add README.txt
+git commit -m "First commit. Adding README.txt file just to get started"
+git remote add origin "https://github.com/rairizarry/murders.git"
+git push    # you may need to add these arguments the first time: --set-upstream origin master
+```
+
+## Comprehension Check and Discussion: Git and GitHub
+### Comprehension Check: Git and GitHub
+#### Question 1
+Which statement describes reasons why we recommend using git and Github when working on data analysis projects?
+
+- Git and Github facilitate fast, high-throughput analysis of large data sets.
+- **Git and Github allow easy version control, collaboration, and resource sharing.**  
+- Git and Github have graphical interfaces that make it easy to learn to code in R.
+- Git and Github is good for long-term storage of private data.
+
+**Answer**  
+Git and Github help you keep track of changes made to your code by you and your collaborators. Github is a good place to store code that you want to share with others in your field.
+
+#### Question 2
+Select the steps necessary to:
+
+1. Create a directory called “project-clone”,
+
+2. Clone the contents of a git repo at the following URL into that directory (https://github.com/user123/repo123.git), and
+
+3. List the contents of the cloned repo.
+
+- 
+```
+mkdir project-clone
+git add https://github.com/user123/repo123.git
+ls
+```
+- 
+```
+mkdir project-clone
+git clone https://github.com/user123/repo123.git
+ls
+```
+- **`mkdir project-clone`**  
+**`cd project-clone`**  
+**`git clone https://github.com/user123/repo123.git`**  
+**`ls`**  
+- 
+```
+mkdir project-clone
+cd project-clone
+git clone https://github.com/user123/repo123.git
+less
+```
+**Explanation**  
+You need to make the directory, move into the new directory, clone the repo, and use ls to list the contents of the cloned repo.
+
+#### Question 3
+You have successfully cloned a GitHub repository onto your local system. The cloned repository contains a file called “heights.txt” that lists the heights of students in a class. One student was missing from the dataset, so you add that student’s height using the following command:
+
+```
+echo “165” >> heights.txt
+```
+Next you enter the command `git status` to check the status of the Github repository.
+
+What message is returned and what does it mean?
+
+- **`modified: heights.txt, no changes added to commit`**  
+**This message means that the heights.txt file was modified, but the changes have not been staged or committed to the local repository.**  
+
+- `modified: heights.txt, no changes added to commit`
+This message means that the heights.txt file was modified and staged, but not yet committed.
+- `1 file changed`
+This message means that the heights.txt file was modified, staged, committed, and pushed to the upstream repository.
+- `modified: heights.txt`
+This message means that the heights.txt file was modified, staged, and committed.
+
+
+**Explanation**  
+The file has been modified in the local directory, but none of the changes have been prepared to be included in the remote repository.
+
+#### Question 4
+You cloned your own repository and modified a file within it on your local system. Next, you executed the following series of commands to include the modified file in the upstream repository, but it didn’t work. Here is the code you typed:
+
+```
+git add modified_file.txt
+git commit -m “minor changes to file” modified_file.txt
+git pull
+```
+
+What is preventing the modified file from being added to the upstream repository?
+
+- The wrong option is being used to add a descriptive message to the commit.
+- **`git push` should be used instead of git pull.**  
+- `git commit` should come before git add.
+- The `git pull` command line needs to include the file name.
+
+**Explanation**  
+To include local changes in the remote repository, you use git push to “push” the changes from your computer to the remote location.
+
+#### Question 5
+You have a directory of scripts and data files on your computer that you want to share with collaborators using GitHub. You create a new repository on your GitHub account called “repo123” that has the following URL: https://github.com/user123/repo123.git.
+
+Which of the following sequences of commands will convert the directory on your computer to a GitHub directory and create and add a descriptive “read me” file to the new repository?
+
+- 
+```
+git init
+git add README.txt
+git commit -m "First commit. Adding README file."
+git remote add origin `https://github.com/user123/repo123.git`
+git push
+```
+- 
+```
+echo “A new repository with my scripts and data” > README.txt
+git init
+git add
+git commit -m "First commit. Adding README file."
+git remote add origin `https://github.com/user123/repo123.git`
+git push
+```
+- 
+```
+echo “A new repository with my scripts and data” > README.txt
+git init
+git add README.txt
+git commit -m "First commit. Adding README file."
+git remote add origin `https://github.com/user123/repo123.git`
+git pull
+```
+- **`echo “A new repository with my scripts and data” > README.txt`**  
+**`git init`**  
+**`git add README.txt`**  
+**`git commit -m "First commit. Adding README file."`**  
+**`git remote add origin https://github.com/user123/repo123.git`**  
+**`git push`**  
+
+**Explanation**  
+You create the README.txt file, initialize the local directory, stage and commit the README.txt file, connect the local directory to the remote directory, then push the files from your computer to your remote Github repository.
+
+
