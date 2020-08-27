@@ -6,6 +6,11 @@ Program website: https://www.edx.org/professional-certificate/harvardx-data-scie
 
 The capstone projects are in these links.  
 
-Movie recommendation system, using Movielens dataset: https://github.com/vivamoto/movielens
+Movie recommendation system, using Movielens dataset:  
+https://github.com/vivamoto/movielens
 
-Classification of wine type: https://github.com/vivamoto/wine
+Classification of wine type:  
+https://github.com/vivamoto/wine
+
+My certificate:  
+https://courses.edx.org/certificates/1e9d9858e1a6466892898dd184ba8e49
