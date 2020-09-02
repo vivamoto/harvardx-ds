@@ -1,7 +1,7 @@
 ---
 title: "DS06 - Wrangling"
 author: "Victor Ivamoto"
-date: "04/11/2019"
+date: "2019/11/04"
 output: 
   html_document: 
     toc: true
@@ -407,7 +407,7 @@ Inspect the imported data from the previous question.
 
 ```{r}
 library(readr)
-url <- "http://mlr.cs.umass.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data"
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data"
           df <- read_csv(url, col_names = FALSE)
 ```
 How many rows are in the dataset?
@@ -1474,7 +1474,7 @@ full_join(tab_1,tab_2, by = "Team")
 #### Introduction: Questions 4 and 5
 The Wikipedia page on [opinion polling for the Brexit referendum,](https://en.wikipedia.org/w/index.php?title=Opinion_polling_for_the_United_Kingdom_European_Union_membership_referendum&oldid=896735054) in which the United Kingdom voted to leave the European Union in June 2016, contains several tables. One table contains the results of all polls regarding the referendum over 2016:
 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/brexit-wiki-table.png)
+![](images/brexit-wiki-table.png)
 
 Wikipedia table of Brexit poll results in 2016. The name of the first column is "Date(s) conducted". There are several other columns, including percentages of poll respondents choosing "Remain" or "Leave", the pollster, and the poll type (online/telephone).
 
@@ -3613,3 +3613,7 @@ sum(afinn_sentiments$value == 4)
 ```
 
 
+# Reference {-}
+
+Rafael Irizarry (2019) - *Data Science: Wrangling*, Harvard University 
+https://www.edx.org/course/data-science-wrangling

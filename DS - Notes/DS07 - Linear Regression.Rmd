@@ -1,7 +1,7 @@
 ---
 title: "DS07 - Linear Regression"
 author: "Victor Ivamoto"
-date: "05/11/2019"
+date: "2019/11/05"
 output: 
   html_document: 
     toc: true
@@ -346,7 +346,7 @@ The correlation coefficient is a summary of what?
 #### Question 3
 Below is a scatter plot showing the relationship between two variables, x and y.
 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_6_1_assessment_IDS.png)
+![](images//7_6_1_assessment_IDS.png)
 
 From this figure, the correlation between x and y appears to be about:
 
@@ -543,7 +543,7 @@ b_2 <- mu_x - m_2*mu_y
 #### Question 1
 Look at the figure below.
 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_8_1_assessment_IDS.png)
+![](images//7_8_1_assessment_IDS.png)
 
 The slope of the regression line in this figure is equal to what, in words?
 
@@ -594,14 +594,14 @@ A regression line is the best prediction of Y given we know the value of X when:
 Which one of the following scatterplots depicts an x and y distribution that is NOT well-approximated by the bivariate normal distribution?
 
 - **Correct**
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_9_2_assessment_A_IDS.png)
+![](images//7_9_2_assessment_A_IDS.png)
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_9_2_assessment_B_IDS.png)
+![](images//7_9_2_assessment_B_IDS.png)
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_9_2_assessment_C_IDS.png)
+![](images//7_9_2_assessment_C_IDS.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/7_9_2_assessment_D_IDS.png)
+![](images//7_9_2_assessment_D_IDS.png)
 
 **Explanation**  
 The v-shaped distribution of points from the first plot means that the x and y variables do not follow a bivariate normal distribution.
@@ -2650,3 +2650,7 @@ This is a good explanation of why this example is considered an example of Simps
 Simpson’s Paradox refers specifically to cases where the sign of the correlation flips when comparing the entire dataset vs. specific strata, so only the first statement is correct.
 
 
+# Reference {-}
+
+Rafael Irizarry (2019) - *Data Science: Linear Regression*, Harvard University 
+https://www.edx.org/course/data-science-linear-regression

@@ -1,7 +1,7 @@
 ---
 title: "DS04 - Inference and Modeling"
 author: "Victor Ivamoto"
-date: "02/11/2019"
+date: "2019/11/02"
 output: 
   html_document: 
     toc: true
@@ -1051,3 +1051,7 @@ two_by_two %>%
 ```
 
 
+# Reference {-}
+
+Rafael Irizarry (2019) - *Data Science: Inference and Modeling*, Harvard University 
+https://www.edx.org/course/data-science-inference-and-modeling

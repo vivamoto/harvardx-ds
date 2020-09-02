@@ -1,7 +1,7 @@
 ---
 title: "DS08 - Machine Learning"
 author: "Victor Ivamoto"
-date: "06/11/2019"
+date: "2019/11/06"
 output: 
   html_document: 
     toc: true
@@ -1271,16 +1271,16 @@ Set the seed to 1, then use the `make_data` function defined above to generate 2
 Which is the correct plot?
 
 - **correct**
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_LogReg_Q1_Plot1.png)
+![](images/Mod8_LogReg_Q1_Plot1.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_LogReg_Q1_Plot2.png)
+![](images/Mod8_LogReg_Q1_Plot2.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_LogReg_Q1_Plot3.png)
+![](images/Mod8_LogReg_Q1_Plot3.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_LogReg_Q1_Plot4.png)
+![](images/Mod8_LogReg_Q1_Plot4.png)
 
 **Explanation**  
 The correct plot can be generated using the following code:
@@ -1417,15 +1417,15 @@ Use the `loess` function to obtain a smooth estimate of the expected number of d
 Which of the following plots is correct?
 
 - **correct**
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Smooth_Q1_Plot1.png)
+![](images/Mod8_Smooth_Q1_Plot1.png)
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Smooth_Q1_Plot2.png)
+![](images/Mod8_Smooth_Q1_Plot2.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Smooth_Q1_Plot3.png)
+![](images/Mod8_Smooth_Q1_Plot3.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Smooth_Q1_Plot4.png)
+![](images/Mod8_Smooth_Q1_Plot4.png)
 
 **Explanation**  
 The following code makes the correct plot:
@@ -3010,16 +3010,16 @@ fit <- rpart(y ~ ., data = dat)
 Which of the following plots has the same tree shape obtained in Q1?
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q2_Plot1.png)
+![](images/Mod8_Trees_Q2_Plot1.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q2_Plot2.png)
+![](images/Mod8_Trees_Q2_Plot2.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q2_Plot3.png)
+![](images/Mod8_Trees_Q2_Plot3.png)
 
 - **Correct**
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q2_Plot4.png)
+![](images/Mod8_Trees_Q2_Plot4.png)
 
 **Explanation**  
 The plot can be made using the following code:
@@ -3091,16 +3091,16 @@ Use the `plot` function to see if the Random Forest from Q4 has converged or if 
 Which of these graphs is produced by plotting the random forest?
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q4_Plot1.png)
+![](images/Mod8_Trees_Q4_Plot1.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q4_Plot2.png)
+![](images/Mod8_Trees_Q4_Plot2.png)
 
 - **Correct**
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q4_Plot3.png)
+![](images/Mod8_Trees_Q4_Plot3.png)
 
 - 
-![](C:/Users/vivam/OneDrive/Documentos/homework-0/Data Science/Mod8_Trees_Q4_Plot4.png)
+![](images/Mod8_Trees_Q4_Plot4.png)
 
 **Explanation**  
 `plot(fit)` will allow you to make the plot.
@@ -3893,3 +3893,8 @@ What is the most important variable?
 varImp(train_rf)
 ```
 
+
+# Reference {-}
+
+Rafael Irizarry (2019) - *Data Science: Machine Learning*, Harvard University 
+https://www.edx.org/course/data-science-machine-learning
