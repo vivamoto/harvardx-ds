@@ -1,0 +1,12 @@
+---
+title: "Untitled"
+author: "Victor Ivamoto"
+date: "28/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+We know it will explain `r 7*6` percent of the total variability. We can compute new residuals like this:
+
